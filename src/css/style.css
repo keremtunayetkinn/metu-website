@@ -365,9 +365,12 @@ p {
    Scroll-triggered fade-in
    ============================================================ */
 .reveal {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.js-loaded .reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .reveal.is-visible {
@@ -377,9 +380,12 @@ p {
 
 /* Staggered children */
 .reveal-group > * {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.js-loaded .reveal-group > * {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .reveal-group.is-visible > *:nth-child(1)  { transition-delay: 0ms;   opacity: 1; transform: none; }
