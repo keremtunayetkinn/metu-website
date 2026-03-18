@@ -114,7 +114,14 @@ function initCountUp() {
     { threshold: 0.5 }
   )
 
-  statNumbers.forEach(el => observer.observe(el))
+  statNumbers.forEach(el => {
+    const rect = el.getBoundingClientRect()
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      countUp(el, parseFloat(el.dataset.count), 1800, el.dataset.suffix || '')
+    } else {
+      observer.observe(el)
+    }
+  })
 }
 
 // ------------------------------------------------------------
