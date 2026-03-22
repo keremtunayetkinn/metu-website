@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://metu-website.vercel.app/sitemap.xml
